@@ -1,0 +1,72 @@
+Data Warehouse
+- Data warehousing on tiedon yhdistelyprosessi, jossa usean 
+  eri l‰hteen tieto yhdistet‰‰n samaan repoon
+- Data warehousing on Prosessi, jonka t‰ytyy tapahtua aina ennen dataminingia
+- Datawarehouseen tallennetaan kaikki data ymp‰rˆivist‰ j‰rjestelmist‰
+- Raakadata, metadata, summary data
+Data Mart
+- Data Warehousin aliosa, usein k‰sittelee spesifi‰ dataa
+  esim. tietyn yrityksen osan dataa.
+- Sis‰lt‰‰ aina vain spesifi‰ dataa. Tarkoitus pit‰‰ uncluttered
+
+Dependent data mart
+- Vet‰‰ dataa data warehousesta, joka on jo luotu
+
+Independent data mart
+- Itsen‰inen j‰rjestelm‰, joka vet‰‰ tietoa k‰ytˆss‰olevista,
+  tai ulkoisista tiedon l‰hteist‰. Tai molemmista.
+
+Dimensional Modeling
+- Identifioi tekniikat, joit‰ k‰ytet‰‰n data warehouse designissa.
+- Toisin kuin entity-relationship mallissa, dimensional modeling ei v‰ltt‰m‰tt‰
+  sis‰ll‰ relaatiotietokantaa
+- DM on tekniikka, joka on suunniteltu k‰ytt‰j‰n antamiin kyselyihin, jotka kohdistuvat 
+  data warehouseen. keskittyy ymm‰rrett‰vyyteen ja tehokkuuteen
+DM-prosessi
+1. Valitse businessprosessi
+ - Kuvaile businessprosessia, jossa tapahtuu
+2. M‰‰rittele graini - vrt salt grains. eli mink‰ mukaan sortataan
+ - Kuvaus, siit‰ mit‰ tietty prosessi tekee. Valitse keskeinen prosessi ja kuvaa sit‰ yhdell‰ lauseella
+3. M‰‰rittele toimiala / dimensiot
+ - Mallin kulmakivet. Mihin datan mallit ker‰t‰‰n	
+4. M‰‰rittele fakta
+ - Numeeriset avaimet jolla faktataulu t‰ytet‰‰n? Kysy?
+
+Star-Schema
+- Yksinkertaisin data-mart skeema
+- Sis‰lt‰‰ yhden tai useamman faktataulun, jotka viittaavat dimensiotauluihin
+- denormalisoituja
+- Hyˆdyt
+ 	- Yksinkertaisemmat kyselyt.
+	- Yksinkertaistettu businessraportointilogiikka
+	- Kyselytehokkuus
+
+Snowflake Schema
+- Looginen tauluj‰rjestelm‰ multikerroksisessa tietokannassa, strategisesti asetettuna tavalla, joka tekee oliosuhteiden
+  sijainnista "luhimhiutalemaisen".
+- Keskell‰ faktataulu, jotka yhdistet‰‰n useisiin dimensioihin.
+- Hyˆdyt:
+	- Jotkut OLAP(analyysi) malinnustyˆkalut on optimoitu lumihiutaleille.
+	- V‰hemm‰n tallennustilaa
+
+Dimensiot.
+- Dimensioilla viitataan kuvaileviin attribuutteihin, jotka liittyvat faktadataan
+. Dimensiotaulujen sis‰lt‰m‰ tieto:
+	- Aika
+	- Maantiede
+	- Tuote
+	- Tyˆntekij‰
+	- Range / toimiv‰li tms.
+
+Dimensiotyypit:
+	- Conformed dimension
+		- Kun dimensiot ovat t‰ysin samat tai toinen on toisen osa.
+	- Junk Dimension
+		- 
+	- Degenerate dimesion
+		- Avain, kuten ostonumero, asiakasnumero, tapahtumanumero tms.
+	- Role-playing dimension
+		- Kun dimensiota k‰ytet‰‰n osana muita dimensioita. Esim p‰iv‰m‰‰r‰‰ myynniss‰ yms.
+Faktat
+- mitattavaa kvantitiivista dataa busineksesta
+- faktataulut sis‰lt‰v‰t metriikkaa tietyst‰ tapahtumasta yleens‰ sis‰lt‰en numeerisia arvoja ja foreign keyta dimensionaaliseen dataan

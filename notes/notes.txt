@@ -1,0 +1,47 @@
+ETL = export transform load.
+Tieto ladataan, muutetaan siirrettävään muotoon ja 
+'ammutaan eteenpäin'.
+Multiplatform support
+Voi käyttää useiden eri integraatioiden välillä.
+Koodin täytyy olla synkronissa kaikkien kolmen
+alustan välillä
+
+IPC
+Softa jonka avulla data-integraatio hoidetaan
+Yksi tapa käyttää, muuntaa ja siirtää dataa
+Mahdollista datan luotettavan siirron ja siirtää aina
+luotettavaa dataa
+- IPC Repository 
+	- Data tallennetaan tänne
+	- Työkaluna toimii manager
+- IPC Server
+	- Kaikki tapahtu täällä.
+	- Fyysinen yhteys lähteisiin ja targeteihin.
+	-  Yhteys olemassa, jotta data saadaan haettua, muunnettua
+	   ja ladattua.
+	- Data myös validoidaan ja tarkistetaan ennen siirtoa
+- Extraction part 
+	- Analyysi ja puhdistus
+	- Tavoitteena muuntaa kaikki data yhteen
+	  muotoon sen prosessointia varten
+- Transfomation part
+	- Datan lisäputsaus
+	- Datan muunto businessvaatimuksiin sopivaksi
+	- Dataan kohdistetaan x-määrä sääntöjä, sen valmistamiseksi
+	  tulevaa latausta varten.
+	- Kaikkeen dataan ei tarvitse kohdistaa sääntöjä
+	- Puhdistus varmistaa, että läpi kulkee
+	  vain oikeanlaista dataa.
+	- Sorttaus. Tavoitteena tehdä datasta helpommin
+	  käsiteltävää
+	- ETL:n toinen vaihe.
+	- Esimerkkejä:
+		- Valitaan vain tietyt pilarit ladattaviksi
+		- Muunnetaa koodatut/salatut arvot
+		- Sorttaus
+		- Kasvatus/Aggregaatio
+		- Pilarien jakaminen
+		- Toistuvien pilarien poisto/vähennys
+- Loading part
+	- Datan siirto uuteen ympäristöön
+	- 

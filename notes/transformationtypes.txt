@@ -1,0 +1,31 @@
+1. Data Cleansing
+	- Prosessi, jossa havaitan ja korjataan 
+	  virheellinen data.
+	- Puhdistuksen jälkeen data on yhteneväinen
+	  järjestelmän samantyyppisten 'settien' kesken
+	- Prosessi:
+	  - Auditointi
+		Data auditoidaan statististen ja 
+		tietokantaperusteisin metodein
+	   - Workflow specification
+		Epäjohdonmukaisuuksien havainnointi
+		ja poisto 
+	   - Workflow execution
+		Vaiheessa Workflow suoritetaan sen jälkeen kun
+		sen spesifiointi on hoidettu ja määritelty
+	   - Post-processing and controlling
+		Puhdistussuorituksen jälkeen dataa tarkastellaan ja 
+		data, jota ei voitu aiemmissa vaiheessa puhdistaa, Puhdistetaan nyt.
+
+2. Data Scrubbing
+	- Luo rutiinitarkastukset kaikille datan epäjohdomukaisuuksille.
+	- Virheenkorjaustekniikka, joka käyttää taustaohjelmaa säännölliseen
+	  muistin tai tallennustilan tarkastukseen virheiden varalta.
+	- Muuttaa sen jälkeen havaitut virheet
+3. Data Aggregation
+	- tietokantojen tietojen yhdistely tarkoituksena niiden
+	  valmistelu datan prosessointiin
+
+4. Data Mergin
+	- Tarkoittaa käyteännössä datan integrointia samanlaisen
+	  ähdedatan kanssa.

@@ -1,0 +1,16 @@
+PowerCenter Designer
+- M‰‰rittelee miten dataa luetaan eri l‰hteist‰.
+- Millaista datan transformaatiota tai puhdistusta t‰ytyy tehd‰
+- Mitk‰ taulut tulee ladata
+
+PowerCenter Admin console
+- Web-sovellus, jota k‰ytet‰‰n manageroimaan domainia
+  ja tietoturvaa.
+- Domain objekteihin kuuluu:
+	- Palvelut / Services
+	- Nodes / Nodet
+	- Lisenssit / Licenses
+- M‰‰rit‰ aina kaksi nodea!
+  - Kaksi, koska jos toinen kaatuu siirryt‰‰n k‰ytt‰m‰‰n
+    toimivaa nodea kaatuneen sijasta.
+- Admin Consolessa voidaan katsoa lokitietoja.
